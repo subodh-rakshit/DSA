@@ -1,8 +1,6 @@
 public class CopyConstructors {
     public static void main(String[] args) {
         Student s1 = new Student();
-        // Student s2 = new Student("Subodh");
-        // Student s3 = new Student(123);
         s1.name = "subodh";
         s1.roll = 456;
         s1.password = "abcd";
@@ -12,10 +10,19 @@ public class CopyConstructors {
 
         Student s2 = new Student(s1); // copy
         s2.password = "xyz";
+        System.out.println("s2 created and printing");
+        for(int i = 0; i < 3; i++){
+            System.out.println(s2.marks[i]);
+        }
         s1.marks[2] = 100;
+        s1.name = "Rakshit";
+        s1.roll = 987;
+        System.out.println("s1 changed after creating s2 and changed the value of s1");
         for (int i = 0; i < 3; i++) {
             System.out.println(s2.marks[i]);
         }
+        System.out.println(s2.name);
+        System.out.println(s2.roll);
     }
 }
 
@@ -35,15 +42,18 @@ class Student {
 
     // Non parameterized constructor
     Student() {
+        marks = new int[3];
         System.out.println("Constructor is called");
     }
 
     // Parameterized constructor
     Student(String name) {
+        marks = new int[3];
         this.name = name;
     }
 
     Student(int roll) {
+        marks = new int[3];
         this.roll = roll;
     }
 }
