@@ -13,5 +13,6 @@
         "11. Patterns (Part 1)",
         "10. Loops",
         "19. Object Oriented Programming (OOPs)"
-    ]
+    ],
+    "java.debug.settings.onBuildFailureProceed": true
 }
