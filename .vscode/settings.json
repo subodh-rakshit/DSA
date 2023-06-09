@@ -3,6 +3,7 @@
         "9. Conditional Statements",
         "8. Operators",
         "7. Variables and Data Types",
+        "19. Object Oriented Programming (OOPs)",
         "18. Bit Manipulation",
         "17. Strings",
         "16. 2D Arrays",
@@ -12,7 +13,7 @@
         "12. Functions and Methods",
         "11. Patterns (Part 1)",
         "10. Loops",
-        "19. Object Oriented Programming (OOPs)"
+        "20. Recursion"
     ],
     "java.debug.settings.onBuildFailureProceed": true,
 }
