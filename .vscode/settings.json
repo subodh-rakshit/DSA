@@ -3,6 +3,7 @@
         "9. Conditional Statements",
         "8. Operators",
         "7. Variables and Data Types",
+        "21. Divide and Conquer",
         "20. Recursion",
         "19. Object Oriented Programming (OOPs)",
         "18. Bit Manipulation",
@@ -14,7 +15,7 @@
         "12. Functions and Methods",
         "11. Patterns (Part 1)",
         "10. Loops",
-        "21. Divide and Conquer"
+        "23. Backtracking"
     ],
     "java.debug.settings.onBuildFailureProceed": true,
 }
