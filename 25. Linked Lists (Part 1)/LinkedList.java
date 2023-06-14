@@ -51,22 +51,22 @@ public class LinkedList {
     tail = newNode;
   }
 
-  public void print(){
+  public void print() {
     // if(head == null){
-    //   System.out.println("Linked List is empty");
-    //   return;
+    // System.out.println("Linked List is empty");
+    // return;
     // }
     Node temp = head;
-    while(temp != null){
+    while (temp != null) {
       System.out.print(temp.data + " -> ");
       temp = temp.next;
     }
     System.out.println("null");
   }
 
-  public void add(int idx, int data){
+  public void add(int idx, int data) {
     // special case: when we need to add something in head
-    if(idx == 0){
+    if (idx == 0) {
       addFirst(data);
       return;
     }
@@ -76,7 +76,7 @@ public class LinkedList {
     Node temp = head;
     int i = 0;
 
-    while(i < idx - 1){
+    while (i < idx - 1) {
       temp = temp.next;
       i++;
     }
@@ -86,11 +86,11 @@ public class LinkedList {
     temp.next = newNode;
   }
 
-  public int removeFirst(){
-    if(size == 0){
+  public int removeFirst() {
+    if (size == 0) {
       System.out.println("LL is Empty");
       return Integer.MIN_VALUE;
-    } else if(size == 1){
+    } else if (size == 1) {
       int val = head.data;
       head = tail = null;
       size = 0;
@@ -102,6 +102,29 @@ public class LinkedList {
     return val;
   }
 
+  public int removeLast(){
+    if(size == 0){
+      System.out.println("Linked List is Empty");
+      return Integer.MIN_VALUE;
+    } else if (size == 1){
+      int val = head.data;
+      head = tail = null;
+      size = 0;
+      return val;
+    }
+
+    // prev: i = size - 2;
+    Node prev = head;
+    for(int i = 0; i < size - 2; i++){
+      prev = prev.next;
+    }
+
+    int val = prev.next.data;   // int val = tail.data;
+    prev.next = null;
+    tail = prev;
+    size--;
+    return val;
+  }
 
   public static void main(String[] args) {
     LinkedList ll = new LinkedList();
@@ -140,17 +163,32 @@ public class LinkedList {
     // ll.addLast(4);
     // ll.addLast(5);
     // ll.add(2, 3);
-    // ll.print();           // 1 -> 2 -> 3 -> 4 -> 5 -> null
+    // ll.print(); // 1 -> 2 -> 3 -> 4 -> 5 -> null
     // System.out.println(ll.size);
 
     // Remove first in LL
+    // ll.addFirst(2);
+    // ll.addFirst(1);
+    // ll.addLast(4);
+    // ll.addLast(5);
+    // ll.add(2, 3);
+    // ll.print(); // 1 -> 2 -> 3 -> 4 -> 5 -> null
+    // ll.removeFirst();
+    // ll.print();
+    // System.out.println(ll.size);
+
+    // Remove Last in LL
     ll.addFirst(2);
     ll.addFirst(1);
     ll.addLast(4);
     ll.addLast(5);
     ll.add(2, 3);
-    ll.print();           // 1 -> 2 -> 3 -> 4 -> 5 -> null
+    ll.print(); // 1 -> 2 -> 3 -> 4 -> 5 -> null
     ll.removeFirst();
+    ll.print();
+    System.out.println(ll.size);
+
+    ll.removeLast();
     ll.print();
     System.out.println(ll.size);
   }
