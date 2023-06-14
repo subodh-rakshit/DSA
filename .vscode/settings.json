@@ -3,6 +3,7 @@
         "9. Conditional Statements",
         "8. Operators",
         "7. Variables and Data Types",
+        "24. ArrayLists",
         "23. Backtracking",
         "21. Divide and Conquer",
         "20. Recursion",
@@ -16,7 +17,7 @@
         "12. Functions and Methods",
         "11. Patterns (Part 1)",
         "10. Loops",
-        "24. ArrayLists"
+        "25. Linked Lists (Part 1)"
     ],
     "java.debug.settings.onBuildFailureProceed": true,
 }
