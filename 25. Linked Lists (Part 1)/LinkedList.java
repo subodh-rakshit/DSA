@@ -18,6 +18,7 @@ public class LinkedList {
     // step 1 : create new node
     Node newNode = new Node(data);
 
+    // Special case
     if (head == null) {
       head = tail = newNode;
       return;
@@ -30,9 +31,33 @@ public class LinkedList {
     head = newNode; // pointing step
   }
 
+  public void addLast(int data) {
+    // step 1: create a new node
+    Node newNode = new Node(data);
+
+    // Special case
+    if (head == null) {
+      head = tail = newNode;
+      return;
+    }
+
+    // step 2: tail.next = newNode
+    tail.next = newNode;
+
+    // step 3: tail = newNode
+    tail = newNode;
+  }
+
   public static void main(String[] args) {
     LinkedList ll = new LinkedList();
-    ll.addFirst(1);
+    // addFirst
+    // ll.addFirst(1);
+    // ll.addFirst(2);
+
+    // addLast
     ll.addFirst(2);
+    ll.addFirst(1);
+    ll.addLast(3);
+    ll.addLast(4);
   }
 }
