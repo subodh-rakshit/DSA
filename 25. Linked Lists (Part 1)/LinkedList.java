@@ -102,11 +102,11 @@ public class LinkedList {
     return val;
   }
 
-  public int removeLast(){
-    if(size == 0){
+  public int removeLast() {
+    if (size == 0) {
       System.out.println("Linked List is Empty");
       return Integer.MIN_VALUE;
-    } else if (size == 1){
+    } else if (size == 1) {
       int val = head.data;
       head = tail = null;
       size = 0;
@@ -115,23 +115,23 @@ public class LinkedList {
 
     // prev: i = size - 2;
     Node prev = head;
-    for(int i = 0; i < size - 2; i++){
+    for (int i = 0; i < size - 2; i++) {
       prev = prev.next;
     }
 
-    int val = prev.next.data;   // int val = tail.data;
+    int val = prev.next.data; // int val = tail.data;
     prev.next = null;
     tail = prev;
     size--;
     return val;
   }
 
-  public int iterativeSearch(int key){
+  public int iterativeSearch(int key) {
     Node temp = head;
     int i = 0;
 
-    while(temp != null){
-      if(temp.data == key){     // key found
+    while (temp != null) {
+      if (temp.data == key) { // key found
         return i;
       }
       temp = temp.next;
@@ -140,6 +140,27 @@ public class LinkedList {
 
     // key not found
     return -1;
+  }
+
+  public int helper(Node head, int key) {
+    // base case
+    if (head == null) {
+      return -1;
+    }
+
+    if (head.data == key) {
+      return 0;
+    }
+    int idx = helper(head.next, key);
+    if (idx == -1) {
+      return -1;
+    }
+
+    return idx + 1;
+  }
+
+  public int recursiveSearch(int key) {
+    return helper(head, key);
   }
 
   public static void main(String[] args) {
@@ -208,8 +229,18 @@ public class LinkedList {
     // ll.print();
     // System.out.println(ll.size);
 
-
     // iterative search
+    // ll.addFirst(2);
+    // ll.addFirst(1);
+    // ll.addLast(4);
+    // ll.addLast(5);
+    // ll.add(2, 3);
+    // ll.print(); // 1 -> 2 -> 3 -> 4 -> 5 -> null
+
+    // System.out.println(ll.iterativeSearch(3));
+    // System.out.println(ll.iterativeSearch(10));
+
+    // Recursive Search
     ll.addFirst(2);
     ll.addFirst(1);
     ll.addLast(4);
@@ -217,7 +248,7 @@ public class LinkedList {
     ll.add(2, 3);
     ll.print(); // 1 -> 2 -> 3 -> 4 -> 5 -> null
 
-    System.out.println(ll.iterativeSearch(3));
-    System.out.println(ll.iterativeSearch(10));
+    System.out.println(ll.recursiveSearch(3));
+    System.out.println(ll.recursiveSearch(10));
   }
 }
