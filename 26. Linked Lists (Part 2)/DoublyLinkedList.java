@@ -63,15 +63,42 @@ public class DoublyLinkedList {
     return val;
   }
 
+  // Reverse DLL
+  public void reverse() {
+    Node curr = head;
+    Node prev = null;
+    Node next;
+
+    while (curr != null) {
+      next = curr.next;
+      curr.next = prev;
+      curr.prev = next;
+
+      prev = curr;
+      curr = next;
+    }
+    head = prev;
+  }
+
   public static void main(String[] args) {
+    // addFirst and removeFirst in DLL
+    // DoublyLinkedList dll = new DoublyLinkedList();
+    // dll.addFirst(3);
+    // dll.addFirst(2);
+    // dll.addFirst(1);
+    // dll.print();
+    // System.out.println(size);
+    // dll.removeFirst();
+    // dll.print();
+    // System.out.println(size);
+
+    // Reverse a DLL
     DoublyLinkedList dll = new DoublyLinkedList();
     dll.addFirst(3);
     dll.addFirst(2);
     dll.addFirst(1);
     dll.print();
-    System.out.println(size);
-    dll.removeFirst();
+    dll.reverse();
     dll.print();
-    System.out.println(size);
   }
 }
