@@ -287,7 +287,7 @@ public class LinkedListPart2 {
 
     // find meeting point
     slow = head;
-    Node prev = null;   // last node track
+    Node prev = null; // last node track
     while (slow != fast) {
       prev = fast;
       slow = slow.next;
@@ -359,6 +359,48 @@ public class LinkedListPart2 {
     return merge(newLeft, newRight);
   }
 
+  public void zig_zag() {
+    // find mid
+    Node slow = head;
+    Node fast = head.next;
+
+    while (fast != null && fast.next != null) {
+      slow = slow.next;
+      fast = fast.next.next;
+    }
+
+    Node mid = slow;
+
+    // reverse 2nd half
+    Node curr = mid.next;
+    mid.next = null;
+    Node prev = null;
+    Node next;
+    while (curr != null) {
+      next = curr.next;
+      curr.next = prev;
+      prev = curr;
+      curr = next;
+    }
+
+    Node left = head;
+    Node right = prev;
+    Node nextL, nextR;
+
+    // alternate merge - zig zag merge
+    while (left != null && right != null) {
+      // zig-zag formation
+      nextL = left.next;
+      left.next = right;
+      nextR = right.next;
+      right.next = nextL;
+
+      // update the values
+      left = nextL;
+      right = nextR;
+    }
+  }
+
   public static void main(String[] args) {
 
     // Detect Cycle in LL
@@ -385,17 +427,28 @@ public class LinkedListPart2 {
     // removeCycle();
     // System.out.println(isCycle());
 
-
     // Merge Sort in Linked List
+    // LinkedListPart2 ll = new LinkedListPart2();
+    // ll.addFirst(1);
+    // ll.addFirst(2);
+    // ll.addFirst(3);
+    // ll.addFirst(4);
+    // // ll.addFirst(5);
+    // // 5 -> 4 -> 3 -> 2 -> 1
+    // ll.print();
+    // ll.head = ll.mergeSort(ll.head);
+    // ll.print();
+
+    // zig zag linked list
     LinkedListPart2 ll = new LinkedListPart2();
-    ll.addFirst(1);
-    ll.addFirst(2);
-    ll.addFirst(3);
-    ll.addFirst(4);
-    // ll.addFirst(5);
-    // 5 -> 4 -> 3 -> 2 -> 1
+    ll.addLast(1);
+    ll.addLast(2);
+    ll.addLast(3);
+    ll.addLast(4);
+    ll.addLast(5);
+    // 1 -> 2 -> 3 -> 4 -> 5
     ll.print();
-    ll.head = ll.mergeSort(ll.head);
+    ll.zig_zag();
     ll.print();
   }
 }
