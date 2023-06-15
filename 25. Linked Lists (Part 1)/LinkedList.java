@@ -163,12 +163,12 @@ public class LinkedList {
     return helper(head, key);
   }
 
-  public void reverse(){
+  public void reverse() {
     Node prev = null;
     Node curr = tail = head;
     Node next;
 
-    while(curr != null){
+    while (curr != null) {
       next = curr.next;
       curr.next = prev;
       prev = curr;
@@ -176,6 +176,34 @@ public class LinkedList {
     }
 
     head = prev;
+  }
+
+  public void deleteNthFromEnd(int n) {
+    // calculate size
+    int size = 0;
+    Node temp = head;
+
+    while (temp != null) {
+      temp = temp.next;
+      size++;
+    }
+
+    if (n == size) {
+      head = head.next; // removeFirst
+      return;
+    }
+
+    // size - n
+    int i = 1;
+    int indexToFind = size - n;
+    Node prev = head;
+    while (i < indexToFind) {
+      prev = prev.next;
+      i++;
+    }
+
+    prev.next = prev.next.next;
+    return;
   }
 
   public static void main(String[] args) {
@@ -267,6 +295,17 @@ public class LinkedList {
     // System.out.println(ll.recursiveSearch(10));
 
     // Reverse Linked List
+    // ll.addFirst(2);
+    // ll.addFirst(1);
+    // ll.addLast(4);
+    // ll.addLast(5);
+    // ll.add(2, 3);
+    // ll.print(); // 1 -> 2 -> 3 -> 4 -> 5 -> null
+
+    // ll.reverse();
+    // ll.print();
+
+    // Remove the nth node from the end
     ll.addFirst(2);
     ll.addFirst(1);
     ll.addLast(4);
@@ -274,7 +313,7 @@ public class LinkedList {
     ll.add(2, 3);
     ll.print(); // 1 -> 2 -> 3 -> 4 -> 5 -> null
 
-    ll.reverse();
+    ll.deleteNthFromEnd(3);
     ll.print();
   }
 }
