@@ -11,14 +11,22 @@ public class DuplicateParentheses {
       // case 1: closing case
       if (ch == ')') {
         int count = 0;
-        while (!s.isEmpty() && s.peek() != '(') {
-          s.pop();
+        // while (!s.isEmpty() && s.peek() != '(') {
+        // s.pop();
+        // count++;
+        // }
+        // if (count < 1) {
+        // return true; // duplicate exists
+        // } else {
+        // s.pop(); // opening pair
+        // }
+
+        // small code
+        while (s.pop() != '(') {
           count++;
         }
         if (count < 1) {
           return true; // duplicate exists
-        } else {
-          s.pop(); // opening pair
         }
       } else {
         // case 2: opening, operator, operands
