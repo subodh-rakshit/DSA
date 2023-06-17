@@ -3,6 +3,7 @@
         "9. Conditional Statements",
         "8. Operators",
         "7. Variables and Data Types",
+        "28. Queue",
         "27. Stack",
         "26. Linked Lists (Part 2)",
         "25. Linked Lists (Part 1)",
@@ -20,7 +21,7 @@
         "12. Functions and Methods",
         "11. Patterns (Part 1)",
         "10. Loops",
-        "28. Queue"
+        "29. Greedy Algorithms"
     ],
     "java.debug.settings.onBuildFailureProceed": true,
 }
