@@ -28,7 +28,7 @@ public class PreorderTraversal {
       return newNode;
     }
 
-    public static void preorder(Node root) {
+    public static void preorder(Node root) { // O(n)
       if (root == null) {
         // System.out.print("-1 ");
         return;
