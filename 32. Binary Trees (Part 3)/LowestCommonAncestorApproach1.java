@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class LowestCommonAncestor {
+public class LowestCommonAncestorApproach1 {
 
   public static class Node {
     int data;
