@@ -3,6 +3,7 @@
         "9. Conditional Statements",
         "8. Operators",
         "7. Variables and Data Types",
+        "31. Binary Trees (Part 2)",
         "30. Binary Trees (Part 1)",
         "29. Greedy Algorithms",
         "28. Queue",
@@ -23,7 +24,7 @@
         "12. Functions and Methods",
         "11. Patterns (Part 1)",
         "10. Loops",
-        "31. Binary Trees (Part 2)"
+        "32. Binary Trees (Part 3)"
     ],
     "java.debug.settings.onBuildFailureProceed": true,
 }
