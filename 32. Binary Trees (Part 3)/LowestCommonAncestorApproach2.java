@@ -30,6 +30,7 @@ public class LowestCommonAncestorApproach2 {
       return rightLca;
     }
 
+    // when the rightLca and leftLca is not null
     return root;
   }
 
