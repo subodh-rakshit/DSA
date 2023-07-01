@@ -19,7 +19,7 @@ public class PQObjects {
   }
   
   public static void main(String[] args) {
-    PriorityQueue<Student> pq = new PriorityQueue<>();
+    PriorityQueue<Student> pq = new PriorityQueue<>(Comparator.reverseOrder());
     pq.add(new Student("A", 4));  // O(log n)
     pq.add(new Student("B", 5));
     pq.add(new Student("C", 3));
