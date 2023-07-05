@@ -16,5 +16,8 @@ public class IterationOnHashmap {
     for (String k : keys) {
       System.out.println("key = "+k+", value = "+hm.get(k));
     }
+
+    // using entrySet
+    System.out.println(hm.entrySet());
   }
 }
