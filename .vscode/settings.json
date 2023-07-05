@@ -3,6 +3,7 @@
         "9. Conditional Statements",
         "8. Operators",
         "7. Variables and Data Types",
+        "35. Heaps",
         "34. Binary Search Trees (Part 2)",
         "33. Binary Search Trees (Part 1)",
         "32. Binary Trees (Part 3)",
@@ -27,7 +28,7 @@
         "12. Functions and Methods",
         "11. Patterns (Part 1)",
         "10. Loops",
-        "35. Heaps"
+        "36. Hashing"
     ],
     "java.debug.settings.onBuildFailureProceed": true,
 }
