@@ -39,7 +39,7 @@ public class WordBreakProblem {
     return curr.eow = true;
   }
 
-  public static boolean wordBreak(String key) { // O(n)
+  public static boolean wordBreak(String key) { // O(L)
     if (key.length() == 0) {
       return true;
     }
