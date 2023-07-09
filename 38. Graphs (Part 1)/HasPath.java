@@ -58,7 +58,7 @@ public class HasPath {
     }
   }
 
-  public static boolean hasPath(ArrayList<Edge>[] graph, int src, int dest, boolean vis[]) {
+  public static boolean hasPath(ArrayList<Edge>[] graph, int src, int dest, boolean vis[]) {  // O(V + E)
     if (src == dest) {
       return true;
     }
