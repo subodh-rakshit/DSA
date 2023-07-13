@@ -3,6 +3,7 @@
         "9. Conditional Statements",
         "8. Operators",
         "7. Variables and Data Types",
+        "39. Graphs (Part 2)",
         "38. Graphs (Part 1)",
         "37. Tries",
         "36. Hashing",
@@ -31,7 +32,7 @@
         "12. Functions and Methods",
         "11. Patterns (Part 1)",
         "10. Loops",
-        "39. Graphs (Part 2)"
+        "40. Graphs (Part 3)"
     ],
     "java.debug.settings.onBuildFailureProceed": true,
 }
