@@ -1,7 +1,7 @@
 import java.util.*;
 import java.util.LinkedList;
 
-public class CycleDetection {
+public class CycleDetectionUndirectedGraph {
 
   static class Edge {
     int src;
