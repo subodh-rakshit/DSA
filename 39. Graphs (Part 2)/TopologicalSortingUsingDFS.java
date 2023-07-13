@@ -24,8 +24,8 @@ public class TopologicalSortingUsingDFS {
     graph[4].add(new Edge(4, 0));
     graph[4].add(new Edge(4, 1));
 
-    graph[1].add(new Edge(5, 0));
-    graph[2].add(new Edge(5, 2));
+    graph[5].add(new Edge(5, 0));
+    graph[5].add(new Edge(5, 2));
   }
 
   public static void topSort(ArrayList<Edge> graph[]) { // O(V + E)
