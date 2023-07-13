@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class TopologicalSorting {
+public class TopologicalSortingUsingDFS {
 
   static class Edge {
     int src;
